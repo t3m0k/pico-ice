@@ -96,9 +96,7 @@ Troubleshooting
    .. code-block:: shell
 
       $ cd build
-      $ cmake .. # download the SDK if not yet done
       $ sed -i '/new_delete.cpp/ d' _deps/pico-sdk-src/src/rp2_common/pico_standard_link/CMakeLists.txt
-      $ cmake .. # rebuild the Makefile with the fix
 
 The GPIO LEDs do not turn on
    Unlike the Raspberry Pi Pico board, which has a green LED attached to the GPIO pin 25,
