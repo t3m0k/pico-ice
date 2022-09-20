@@ -29,7 +29,7 @@ CMake setup
       
       # CMake configuration of the application
       add_executable(firmware firmware.c)
-      target_link_libraries(firmware pico_ice_sdk pico_stdlib)
+      target_link_libraries(firmware pico_ice_sdk pico_stdlib pico_stdio_usb)
       pico_add_extra_outputs(firmware)
 
    Other names than ``pico_ice_firmware`` and ``firmware`` may be chosen.
@@ -119,3 +119,12 @@ Flashing an UF2 file does not change the memory neither restart the board
    Try to copy the CURRENT.UF2 to NEW.UF2 upon that same directory, and unmount the device.
    This should trigger a restart of the device.
    This restart device should appear from the debug UART: ``board_dfu_complete: rebooting``.
+
+Access to the ``printf()`` output
+   Just like in the pico-sdk, "stdout", the printf output can be retreived on either a physical UART interface or over USB UART.
+   This is configured normally at the pico-sdk level, by adding one of ``pico_stdio_uart`` or ``pico_stdio_usb`` in the CMakeLists.txt call ``target_link_libraries(firmware ...)``.
+   See the `pico-sdk documentation <>`_ for more details.
+
+   If using the USB UART interface, it can for instance be accessed with `picocom <https://directory.fsf.org/wiki/Picocom>`_: ``picocom -b 115200 /dev/ttyACM0``.
+
+   If using the UART interface, the default UART pins of the pico-ice board will be used (`GPIO12 is pico-ice TX, GPIO13 is pico-ice RX <pinout_>`_) and an USB-UART adapter.

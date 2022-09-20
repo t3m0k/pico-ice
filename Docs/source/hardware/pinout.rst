@@ -60,45 +60,45 @@ RP2040 pinout
 
 .. code-block::
 
-   GPIO0     ICE_SO                │ FPGA programming interface
-   GPIO1     ICE_SSN               │
-   GPIO2     ICE_SCK               │
-   GPIO3     ICE_SI                │
+   GPIO0      ICE_SO                │ FPGA programming interface
+   GPIO1      ICE_SSN               │
+   GPIO2      ICE_SCK               │
+   GPIO3      ICE_SI                │
 
-   GPIO4 TX  IOT_38b RX  (UART)    │ Pico-FPGA bus
-   GPIO5 RX  IOT_36b TX  (UART)    │
-   GPIO6     IOB_23b               │
-   GPIO7     IOB_29b               │
-   GPIO8     IOT_39a               │
-   GPIO9     IOT_37a               │
-   GPIO10    IOB_25b_G3            │
-   GPIO11    IOB_31b               │
+   GPIO4 TX   IOT_38b RX  (UART)    │ Pico-FPGA bus
+   GPIO5 RX   IOT_36b TX  (UART)    │
+   GPIO6      IOB_23b               │
+   GPIO7      IOB_29b               │
+   GPIO8      IOT_39a               │
+   GPIO9      IOT_37a               │
+   GPIO10     IOB_25b_G3            │
+   GPIO11     IOB_31b               │
 
-   GPIO12    PICO_PMOD_A1          │ Pico PMOD
-   GPIO13    PICO_PMOD_A2          │
-   GPIO14    PICO_PMOD_A3          │
-   GPIO15    PICO_PMOD_A4          │
-   GPIO16    PICO_PMOD_B1          │
-   GPIO17    PICO_PMOD_B2          │
-   GPIO18    PICO_PMOD_B3          │
-   GPIO19    PICO_PMOD_B4          │
+   GPIO12 TX  PICO_PMOD_A1 (UART)   │ Pico PMOD
+   GPIO13 RX  PICO_PMOD_A2 (UART)   │
+   GPIO14     PICO_PMOD_A3          │
+   GPIO15     PICO_PMOD_A4          │
+   GPIO16 RX  PICO_PMOD_B1 (SPI)    │
+   GPIO17 CSN PICO_PMOD_B2 (SPI)    │
+   GPIO18 SCK PICO_PMOD_B3 (SPI)    │
+   GPIO19 TX  PICO_PMOD_B4 (SPI)    │
 
-   GPIO20    SRAM_SSN              │ CS of the FPGA SRAM chip
+   GPIO20     SRAM_SSN              │ CS of the FPGA SRAM chip
 
-   GPIO21    IOT_46b_G0            │ ICE_CLK (FPGA Clock)
+   GPIO21     IOT_46b_G0            │ ICE_CLK (FPGA Clock)
 
-   GPIO22    PICO_LED_R            │ LED
-   GPIO23    PICO_LED_G            │
-   GPIO24    PICO_LED_B            │
+   GPIO22     PICO_LED_R            │ LED
+   GPIO23     PICO_LED_G            │
+   GPIO24     PICO_LED_B            │
 
-   GPIO25    PICO_CLKOUT           │ clock PMOD
+   GPIO25     PICO_CLKOUT           │ clock PMOD
 
-   GPIO26    ADC0/CDONE            │ ADC PMOD / ICE_DONE (FPGA status pin)
+   GPIO26     ADC0/CDONE            │ ADC PMOD / ICE_DONE (FPGA status pin)
 
-   GPIO27    ADC1/CRESET           │ ADC PMOD / ICE_RSTn (FPGA nreset pin)
+   GPIO27     ADC1/CRESET           │ ADC PMOD / ICE_RSTn (FPGA nreset pin)
 
-   GPIO28    ADC2                  │ extra ADCs pins
-   GPIO29    ADC3                  │
+   GPIO28     ADC2                  │ extra ADCs pins
+   GPIO29     ADC3                  │
 
    QSPI_SS    QSPI_SS              │ PICO flash
    QSPI_SCLK  QSPI_SCLK            │
