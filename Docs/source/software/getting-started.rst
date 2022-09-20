@@ -58,7 +58,7 @@ Or it can use the `pico-sdk API <https://raspberrypi.github.io/pico-sdk-doxygen/
 
 The headers in the ``pico-ice`` directory can be included to access the functions described in the C API.
 
-For example, reading from flash:
+For example:
 
 .. code-block:: C
 
@@ -123,8 +123,10 @@ Flashing an UF2 file does not change the memory neither restart the board
 Access to the ``printf()`` output
    Just like in the pico-sdk, "stdout", the printf output can be retreived on either a physical UART interface or over USB UART.
    This is configured normally at the pico-sdk level, by adding one of ``pico_stdio_uart`` or ``pico_stdio_usb`` in the CMakeLists.txt call ``target_link_libraries(firmware ...)``.
-   See the `pico-sdk documentation <>`_ for more details.
+   See the `pico-sdk documentation <https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf#page=291>`_ for more details.
+
+   The example above uses pico_stdio_usb.
 
    If using the USB UART interface, it can for instance be accessed with `picocom <https://directory.fsf.org/wiki/Picocom>`_: ``picocom -b 115200 /dev/ttyACM0``.
 
-   If using the UART interface, the default UART pins of the pico-ice board will be used (`GPIO12 is pico-ice TX, GPIO13 is pico-ice RX <pinout_>`_) and an USB-UART adapter.
+   If using the UART interface, the default UART pins of the pico-ice board will be used (see GPIO12 and GPIO13 in the :doc:`../hardware/pinout`) and an USB-UART adapter.
